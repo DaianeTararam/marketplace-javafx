@@ -1,4 +1,4 @@
-# Projeto-BancoDeDados - Sistema de Comanda Eletrônica
+# Sistema de MarketPlace em JavaFX
 
 Este projeto tem como objetivo a simulação de um Marketplace utilizando JavaFX, inspirado em soluções já existentes no mercado.
 O desenvolvimento segue o padrão de arquitetura MVC (Model-View-Controller), com uso de Gradle para gerenciamento de dependências e integração com um banco de dados relacional (SQL Server) para controle e persistência das informações.
