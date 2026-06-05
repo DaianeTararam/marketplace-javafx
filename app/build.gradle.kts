@@ -23,6 +23,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    
+    //Dependencia para o driver do SQL Server
+    implementation("com.microsoft.sqlserver:mssql-jdbc:13.4.0.jre11")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -34,7 +37,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "edu.curso.App"
 }
 
 tasks.named<Test>("test") {

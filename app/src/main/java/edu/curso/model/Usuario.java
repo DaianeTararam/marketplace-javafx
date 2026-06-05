@@ -29,4 +29,12 @@ public class Usuario {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }
