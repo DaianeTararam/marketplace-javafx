@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.curso.model.Produto;
 import edu.curso.model.Loja;
+import edu.curso.model.Produto;
 import edu.curso.persistence.GenericDao;
 import edu.curso.persistence.ProdutoDAO;
 
@@ -21,9 +21,9 @@ public class ProdutoDAOImpl implements ProdutoDAO {
         try {
             gDao = new GenericDao();
             c = gDao.getConnection();
-            System.out.println("Conexão do Produto estabelecida com sucesso!");
+            System.out.println("Conexao do Produto estabelecida com sucesso!");
         } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Falha de conexão no Produto...");
+            System.out.println("Falha de conexao no Produto...");
             e.printStackTrace();
         }
     }
@@ -51,12 +51,11 @@ public class ProdutoDAOImpl implements ProdutoDAO {
     public List<Produto> consultar(String nome) {
         List<Produto> lista = new ArrayList<>();
         try {
-            // INNER JOIN para cumprir a exigência do professor de junção de tabelas!
             String sql = "SELECT p.*, l.nome AS nome_loja FROM produto p " +
                          "INNER JOIN loja l ON p.id_loja = l.id " +
                          "WHERE p.nome LIKE ?";
             PreparedStatement p = c.prepareStatement(sql);
-            p.setString(1, "%" + nome + "%"); // Permite buscar por partes do nome
+            p.setString(1, "%" + nome + "%");
             ResultSet rs = p.executeQuery();
             
             while (rs.next()) {

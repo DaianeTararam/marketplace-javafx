@@ -20,7 +20,9 @@ public class LojaDAOImpl implements LojaDAO {
         try {
             gDao = new GenericDao();
             c = gDao.getConnection();
+            System.out.println("Conexao LojaDAO estabelecida com sucesso.");
         } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Falha de conexao na LojaDAO.");
             e.printStackTrace();
         }
     }

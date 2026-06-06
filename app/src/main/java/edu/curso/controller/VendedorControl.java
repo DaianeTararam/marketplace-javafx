@@ -77,20 +77,25 @@ public class VendedorControl {
     public StringProperty getUsername() { 
         return username; 
     }
-    public StringProperty getCnpj() { 
+
+
+    public StringProperty getCnpj(){ 
         return cnpj; 
     }
-    public StringProperty getNome() { 
+
+    public StringProperty getNome(){ 
         return nome; 
     }
-    public StringProperty getEmail() { 
+
+    public StringProperty getEmail(){ 
         return email; 
     }
-    public StringProperty getSenha() { 
+    
+    public StringProperty getSenha(){ 
         return senha; 
     }
 
-    public ObservableList<Vendedor> getLista() {
+    public ObservableList<Vendedor> getLista(){
         return listaVendedores;
     }
 }

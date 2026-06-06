@@ -21,7 +21,6 @@ public class ProdutoControl {
 
     private ObservableList<Produto> listaProdutos = FXCollections.observableArrayList();
 
-    // Sua variável oficial padrão!
     private ProdutoDAO pDao = new ProdutoDAOImpl();
 
     public void salvar() {
@@ -70,17 +69,22 @@ public class ProdutoControl {
     public StringProperty nomeProperty() { 
         return nome; 
     }
+    
     public StringProperty precoProperty(){ 
         return preco; 
     }
+
     public StringProperty descricaoProperty(){ 
         return descricao; 
     }
+
     public StringProperty categoriaProperty(){ 
         return categoria; 
     }
+
     public StringProperty idLojaProperty(){ 
-        return idLoja; }
+        return idLoja;
+    }
 
     public ObservableList<Produto> getListaProdutos() {
         return listaProdutos;

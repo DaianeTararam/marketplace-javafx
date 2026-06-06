@@ -7,5 +7,6 @@ import edu.curso.model.Pedido;
 
 public interface PedidoDAO {
     public void finalizarVenda(Pedido pedido, List<ItemPedido> carrinho);
-    public List<Pedido> buscarHistoricoPorComprador(String username);
+    public List<Pedido> buscarHistoricoComprador(String username, String senha);
+    public List<Pedido> buscarHistoricoVendedor(String username, String senha);
 }

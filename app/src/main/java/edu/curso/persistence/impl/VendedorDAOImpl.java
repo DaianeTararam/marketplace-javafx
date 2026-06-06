@@ -20,9 +20,9 @@ public class VendedorDAOImpl implements VendedorDAO {
         try {
             gDao = new GenericDao();
             c = gDao.getConnection();
-            System.out.println("Conexão do Vendedor estabelecida com sucesso!");
+            System.out.println("Conexao do Vendedor estabelecida com sucesso!");
         } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Falha de conexão no Vendedor...");
+            System.out.println("Falha de conexao no Vendedor...");
             e.printStackTrace();
         }
     }

@@ -1,8 +1,5 @@
 package edu.curso.view;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Menu;
@@ -13,42 +10,52 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class PrincipalBoundary extends Application {
-    private Map<String, Tela> telas = new HashMap();
+
+    private Pane paginaInicial = new PaginaInicialBoundary().render();
     private Pane vendedorBoundary = new VendedorBoundary().render();
     private Pane lojaBoundary = new LojaBoundary().render();
     private Pane produtoBoundary = new ProdutoBoundary().render();
+    private Pane compradorBoundary = new CompradorBoundary().render();
+    private Pane pedidoBoundary = new PedidoBoundary().render();
+    private Pane historicoBoundary = new HistoricoBoundary().render();
 
     @Override
-    public void start(Stage stage){
+    public void start(Stage stage) {
         BorderPane panePrincipal = new BorderPane();
-        Scene s = new Scene(panePrincipal, 800, 600);
-        
+        Scene s = new Scene(panePrincipal, 900, 650);
+
         MenuBar menuBar = new MenuBar();
 
-        Menu mnuInicio  = new Menu("Página Inicial");
+        Menu mnuInicio = new Menu("Página Inicial");
         Menu mnuCadastro = new Menu("Cadastro");
-        Menu mnuAjuda    = new Menu("Ajuda");
 
-        menuBar.getMenus().addAll(mnuInicio, mnuCadastro, mnuAjuda);
+        menuBar.getMenus().addAll(mnuInicio, mnuCadastro);
 
-        MenuItem mnuVendedor  = new MenuItem("Vendedores");
-        MenuItem mnuProduto   = new MenuItem("Produtos");
+        MenuItem mnuHome = new MenuItem("Ver produtos");
+        MenuItem mnuVendedor = new MenuItem("Vendedores");
+        MenuItem mnuLoja = new MenuItem("Lojas");
+        MenuItem mnuProduto = new MenuItem("Produtos");
         MenuItem mnuComprador = new MenuItem("Compradores");
-        MenuItem mnuPedido    = new MenuItem("Pedidos");
-        MenuItem mnuLoja    = new MenuItem("Lojas");
+        MenuItem mnuPedido = new MenuItem("Novo pedido");
+        MenuItem mnuHistorico = new MenuItem("Histórico de pedidos");
 
-        mnuVendedor.setOnAction(e  -> panePrincipal.setCenter(vendedorBoundary));
-        mnuLoja.setOnAction(e  -> panePrincipal.setCenter(lojaBoundary));
-        mnuProduto.setOnAction(e   -> panePrincipal.setCenter(produtoBoundary));
-        //mnuComprador.setOnAction(e -> panePrincipal.setCenter(compradorPane));
-        //mnuPedido.setOnAction(e    -> panePrincipal.setCenter(pedidoPane));
+        mnuHome.setOnAction(e -> panePrincipal.setCenter(paginaInicial));
+        mnuVendedor.setOnAction(e -> panePrincipal.setCenter(vendedorBoundary));
+        mnuLoja.setOnAction(e -> panePrincipal.setCenter(lojaBoundary));
+        mnuProduto.setOnAction(e -> panePrincipal.setCenter(produtoBoundary));
+        mnuComprador.setOnAction(e -> panePrincipal.setCenter(compradorBoundary));
+        mnuPedido.setOnAction(e -> panePrincipal.setCenter(pedidoBoundary));
+        mnuHistorico.setOnAction(e -> panePrincipal.setCenter(historicoBoundary));
 
-        mnuCadastro.getItems().addAll(mnuVendedor, mnuLoja, mnuProduto, mnuComprador, mnuPedido);
-        mnuInicio.getItems().addAll();
+        mnuInicio.getItems().add(mnuHome);
+        mnuCadastro.getItems().addAll(mnuVendedor, mnuLoja, mnuProduto, mnuComprador, mnuPedido, mnuHistorico);
+
         panePrincipal.setTop(menuBar);
 
+        panePrincipal.setCenter(paginaInicial);
+
+        stage.setTitle("ArteCraft — Marketplace");
         stage.setScene(s);
         stage.show();
-
     }
 }
