@@ -75,7 +75,7 @@ Todos os diagramas foram desenvolvidos no Visual Paradigm 17.2.
 
 ## FASE 3 - Banco de Dados
 
-Nesta fase foi desenvolvido o Banco de Dados com SQL Server, [Veja aqui](https://github.com/DaianeTararam/marketplace-javafx/blob/main/app/src/main/resources/db_ArteCRAFT.sql).
+Nesta fase foi desenvolvido o Banco de Dados com SQL Server, [veja aqui](https://github.com/DaianeTararam/marketplace-javafx/blob/main/app/src/main/resources/db_ArteCRAFT.sql).
 O arquivo db_ArteCRAFT já possui os dados para teste do sistema.
 
 
@@ -111,7 +111,7 @@ Abaixo esta as telas testadas.
 
 ## FASE 6 - Geração do Arquivo Jar
 
-O arquivo Jar, encontra-se [aqui](https://github.com/DaianeTararam/marketplace-javafx/blob/main/app/src/main/resources/ArteCraft.jar)
+O arquivo Jar, encontra-se [aqui](https://github.com/DaianeTararam/marketplace-javafx/blob/main/app/src/main/resources/ArteCraft.jar).
 
 
 **Desenvolvido por Daiane Tararam**  
