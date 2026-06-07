@@ -114,7 +114,5 @@ Abaixo esta as telas testadas.
 O arquivo Jar, encontra-se [aqui](https://github.com/DaianeTararam/marketplace-javafx/blob/main/app/src/main/resources/ArteCraft.jar)
 
 
-### Desenvolvedora do projeto
-
-| [<img src="https://github.com/DaianeTararam.png" width="100px" style="border-radius: 50%"><br><sub>Daiane Tararam</sub>](https://github.com/DaianeTararam) |
-| :---: |
+**Desenvolvido por Daiane Tararam**  
+*Estudante de Análise e Desenvolvimento de Sitemas na Fatec ZL*
